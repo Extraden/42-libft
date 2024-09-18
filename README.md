@@ -1,1 +1,1 @@
-My progress in main core of school 42
+My progress in common core of school 42
