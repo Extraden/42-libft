@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsemenov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 15:13:20 by dsemenov          #+#    #+#             */
-/*   Updated: 2024/11/06 17:52:07 by dsemenov         ###   ########.fr       */
+/*   Created: 2024/11/07 13:12:51 by dsemenov          #+#    #+#             */
+/*   Updated: 2024/11/08 14:09:31 by dsemenov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stddef.h>
 
-size_t	ft_strlen(const char *s)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
+	if (dest == NULL && src == NULL)
+		return (dest);
 	i = 0;
-	while (s[i])
+	while (i < n)
+	{
+		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 		i++;
-	return (i);
+	}
+	return (dest);
 }
 
 /*
@@ -28,6 +33,10 @@ size_t	ft_strlen(const char *s)
 
 int	main(void)
 {
-	printf("%zu\n", ft_strlen("Hello"));
+	char buffer[50] = "Hello";
+	char destination[50];
+
+	ft_memcpy(destination, buffer, 3);
+	printf("%s", destination);
 }
 */

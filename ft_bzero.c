@@ -1,33 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsemenov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 15:13:20 by dsemenov          #+#    #+#             */
-/*   Updated: 2024/11/06 17:52:07 by dsemenov         ###   ########.fr       */
+/*   Created: 2024/11/07 12:29:49 by dsemenov          #+#    #+#             */
+/*   Updated: 2024/11/08 12:00:31 by dsemenov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stddef.h>
 
-size_t	ft_strlen(const char *s)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
+	unsigned char	*ptr;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	ptr = (unsigned char *)s;
+	while (n)
+	{
+		*ptr = 0;
+		ptr++;
+		n--;
+	}
 }
 
 /*
+#include <string.h>
 #include <stdio.h>
 
-int	main(void)
+int main(void)
 {
-	printf("%zu\n", ft_strlen("Hello"));
+  char buffer[50] = "Hello world!";
+  ft_bzero(buffer, 10);
+  printf("%s\n", buffer);
 }
 */

@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsemenov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 15:13:20 by dsemenov          #+#    #+#             */
-/*   Updated: 2024/11/06 17:52:07 by dsemenov         ###   ########.fr       */
+/*   Created: 2024/11/04 17:21:46 by dsemenov          #+#    #+#             */
+/*   Updated: 2024/11/07 10:22:16 by dsemenov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
-size_t	ft_strlen(const char *s)
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
+
+int	ft_isalnum(int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	if ((ft_isalpha(c) || ft_isdigit(c)))
+		return (1);
+	return (0);
 }
 
 /*
@@ -28,6 +27,9 @@ size_t	ft_strlen(const char *s)
 
 int	main(void)
 {
-	printf("%zu\n", ft_strlen("Hello"));
+	printf("%d\n", ft_isalnum('5'));
+	printf("%d\n", ft_isalnum('a'));
+	printf("%d\n", ft_isalnum('G'));
+	printf("%d\n", ft_isalnum(';'));
 }
 */

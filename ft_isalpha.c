@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dsemenov <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/04 16:57:23 by dsemenov          #+#    #+#             */
+/*   Updated: 2024/11/07 14:56:24 by dsemenov         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 		return (1);
@@ -12,15 +24,7 @@ int	ft_isalpha(char c)
 
 int	main(void)
 {
-	char	letter;
-
-	letter = 'A' - 1;
-	while (letter <= 'Z' + 1)
-	{
-		printf("%d", ft_isalpha(letter));
-		letter++;
-	}
-	//res = ft_isalpha('B');
-	//printf("%d\n", res);
+	printf("%d\n", isalpha('c'));
+	printf("%d", isalpha('4'));
 }
 */
