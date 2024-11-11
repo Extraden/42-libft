@@ -6,7 +6,7 @@
 /*   By: dsemenov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 11:26:59 by dsemenov          #+#    #+#             */
-/*   Updated: 2024/11/11 12:49:12 by dsemenov         ###   ########.fr       */
+/*   Updated: 2024/11/11 13:05:40 by dsemenov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	j;
 	size_t	dst_len;
 	size_t	src_len;
-	size_t	total_len;
 
 	src_len = ft_strlen(src);
 	dst_len = ft_strlen(dst);
-	total_len = src_len + dst_len;
 	if (size <= dst_len)
 		return (size + src_len);
 	i = ft_strlen(dst);
@@ -36,5 +34,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		j++;
 	}
 	dst[i + j] = 0;
-	return (total_len);
+	return (src_len + dst_len);
 }
