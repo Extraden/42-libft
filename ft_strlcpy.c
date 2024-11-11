@@ -6,7 +6,7 @@
 /*   By: dsemenov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:12:32 by dsemenov          #+#    #+#             */
-/*   Updated: 2024/11/09 16:09:28 by dsemenov         ###   ########.fr       */
+/*   Updated: 2024/11/11 11:18:07 by dsemenov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 
+	if (size == 0)
+		return (ft_strlen(src));
 	i = 0;
 	while (src[i] && i < size - 1)
 	{
@@ -28,6 +30,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	return (ft_strlen(src));
 }
 
+/*
 #include <stdio.h>
 #include <bsd/string.h>
 
@@ -45,3 +48,4 @@ int	main(void)
 	printf("%zu\n", ft_strlcpy(b, a, 0));
 	printf("%s\n", b);
 }
+*/

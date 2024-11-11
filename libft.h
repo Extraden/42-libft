@@ -6,7 +6,7 @@
 /*   By: dsemenov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:02:21 by dsemenov          #+#    #+#             */
-/*   Updated: 2024/11/09 15:07:00 by dsemenov         ###   ########.fr       */
+/*   Updated: 2024/11/11 10:58:45 by dsemenov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ void    *ft_calloc(size_t nmemb, size_t size);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void    ft_putchar(char c);
 void    ft_putchar_fd(char c, int fd);
+size_t  ft_strlcpy(char *dst, const char *src, size_t size);
 
 #endif
