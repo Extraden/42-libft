@@ -6,7 +6,7 @@
 /*   By: dsemenov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 12:18:33 by dsemenov          #+#    #+#             */
-/*   Updated: 2024/11/13 14:20:40 by dsemenov         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:22:28 by dsemenov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,21 +36,5 @@ int	main(void)
 	char	s1[100] = "Hello";
 	char	s2[100] = "Hella";
 	strncmp()
-}
-*/
-
-/*
-int main(void)
-{
-	char *ptr;
-
-	ptr = '\0';
-	__builtin_printf("%s\n", ptr);
-
-	ptr = "\0";
-	__builtin_printf("%p\n", ptr);
-
-	ptr = "asdasd";
-	__builtin_printf("%p\n", ptr);
 }
 */
