@@ -6,7 +6,7 @@
 /*   By: dsemenov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:02:21 by dsemenov          #+#    #+#             */
-/*   Updated: 2024/11/11 17:50:09 by dsemenov         ###   ########.fr       */
+/*   Updated: 2024/11/13 12:17:57 by dsemenov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ char    *ft_strdup(const char *s);
 int	ft_atoi(const char *nptr);
 char	*ft_strchr(const char *s, int c);
 char    *ft_strrchr(const char *s, int c);
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif
