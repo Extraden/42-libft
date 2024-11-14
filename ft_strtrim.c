@@ -6,15 +6,12 @@
 /*   By: dsemenov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 14:41:39 by dsemenov          #+#    #+#             */
-/*   Updated: 2024/11/14 19:41:06 by dsemenov         ###   ########.fr       */
+/*   Updated: 2024/11/14 20:02:00 by dsemenov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-
-size_t  ft_strlcpy(char *dst, const char *src, size_t size);
-size_t  ft_strlen(const char *s);
 
 static size_t	first_index(char const *s1, const char *set)
 {
@@ -34,12 +31,11 @@ static size_t	first_index(char const *s1, const char *set)
 			j++;
 		}
 		if (has_char == 0)
-			break;
+			break ;
 		i++;
 	}
 	return (i);
 }
-
 
 static size_t	last_index(char const *s1, const char *set)
 {
@@ -59,7 +55,7 @@ static size_t	last_index(char const *s1, const char *set)
 			j++;
 		}
 		if (has_char == 0)
-			break;
+			break ;
 		i--;
 	}
 	return (i);
