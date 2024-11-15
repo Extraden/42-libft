@@ -6,7 +6,7 @@
 /*   By: dsemenov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 19:22:04 by dsemenov          #+#    #+#             */
-/*   Updated: 2024/11/14 14:27:08 by dsemenov         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:47:15 by dsemenov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start >= ft_strlen(s))
 	{
 		res = malloc(1);
+		if (!res)
+			return (NULL);
 		res[0] = '\0';
 		return (res);
 	}
