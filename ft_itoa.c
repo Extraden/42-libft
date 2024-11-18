@@ -6,7 +6,7 @@
 /*   By: dsemenov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 16:01:48 by dsemenov          #+#    #+#             */
-/*   Updated: 2024/11/15 17:41:10 by dsemenov         ###   ########.fr       */
+/*   Updated: 2024/11/18 11:55:55 by dsemenov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static size_t	numlength(int n)
 {
-	size_t	len;
+	size_t			len;
 	unsigned int	buffer;
 
 	len = 0;
@@ -37,9 +37,9 @@ static size_t	numlength(int n)
 
 char	*ft_itoa(int n)
 {
-	size_t	length;
-	char	*s;
-	size_t	i;
+	size_t			length;
+	char			*s;
+	size_t			i;
 	unsigned int	buffer;
 
 	length = numlength(n);
@@ -58,7 +58,7 @@ char	*ft_itoa(int n)
 	while (i < length && s[length - i - 1] != '-')
 	{
 		s[length - i - 1] = buffer % 10 + '0';
-		buffer /= 10;	
+		buffer /= 10;
 		i++;
 	}
 	return (s);
