@@ -6,7 +6,7 @@
 /*   By: dsemenov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:48:24 by dsemenov          #+#    #+#             */
-/*   Updated: 2024/11/15 15:24:38 by dsemenov         ###   ########.fr       */
+/*   Updated: 2024/11/18 19:30:04 by dsemenov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static size_t	count_words(char const *s, char c)
 	return (words_num);
 }
 
-static void	free_all(char **tab, size_t words_num)
+static void	*free_all(char **tab, size_t words_num)
 {
 	size_t	i;
 
@@ -48,9 +48,10 @@ static void	free_all(char **tab, size_t words_num)
 		i++;
 	}
 	free(tab);
+	return (NULL);
 }
 
-char    **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**res;
 	size_t	words_num;
@@ -72,16 +73,12 @@ char    **ft_split(char const *s, char c)
 			word_length++;
 		res[word_index] = ft_substr(s, 0, word_length);
 		if (!res[word_index])
-		{
-			free_all(res, word_index);
-			return (NULL);
-		}
+			return (free_all(res, word_index));
 		word_index++;
 		s += word_length;
 	}
 	return (res);
 }
-
 
 /*
 int	main(void)
