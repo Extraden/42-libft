@@ -6,7 +6,7 @@
 /*   By: dsemenov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:02:21 by dsemenov          #+#    #+#             */
-/*   Updated: 2024/11/15 16:02:58 by dsemenov         ###   ########.fr       */
+/*   Updated: 2024/11/19 16:20:03 by dsemenov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 # define LIBFT_H
 
 # include <stddef.h>
+
+typedef struct	s_list
+{
+	void		*content;
+	struct s_list	*next;
+}	t_list;
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
@@ -49,6 +55,7 @@ void    ft_striteri(char *s, void (*f)(unsigned int, char*));
 void    ft_putstr_fd(char *s, int fd);
 void    ft_putendl_fd(char *s, int fd);
 void    ft_putnbr_fd(int n, int fd);
+t_list  *ft_lstnew(void *content);
 
 #endif
 

@@ -10,6 +10,8 @@ OBJS = ft_bzero.o ft_isalnum.o ft_isascii.o ft_isprint.o  \
 	ft_strnstr.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o \
 	ft_striteri.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o
 
+BONUS_OBJS = ft_lstnew.o
+
 HEADER = libft.h
 
 all: $(NAME)
@@ -17,11 +19,14 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS) 
+
 %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 	rm -f $(NAME)
