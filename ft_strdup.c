@@ -6,15 +6,13 @@
 /*   By: dsemenov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:00:54 by dsemenov          #+#    #+#             */
-/*   Updated: 2024/11/13 14:18:09 by dsemenov         ###   ########.fr       */
+/*   Updated: 2024/11/24 19:40:33 by dsemenov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stddef.h>
 #include <stdlib.h>
-
-size_t	ft_strlen(const char *s);
 
 char	*ft_strdup(const char *s)
 {
