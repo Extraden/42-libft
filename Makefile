@@ -16,6 +16,8 @@ BONUS_OBJS = ft_lstnew_bonus.o ft_lstadd_front_bonus.o ft_lstsize_bonus.o \
 
 HEADER = libft.h
 
+DEPS = $(OBJS:%.o=%.d) $(BONUS_OBJS:%.o=%.d)
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
@@ -24,15 +26,17 @@ $(NAME): $(OBJS)
 bonus: $(OBJS) $(BONUS_OBJS)
 	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS) 
 
-%.o: %.c $(HEADER)
-	$(CC) $(CFLAGS) -c $< -o $@
+%.o: %.c
+	$(CC) $(CFLAGS) -I. -MMD -MP -c $< -o $@
 
 clean:
-	rm -f $(OBJS) $(BONUS_OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS) $(DEPS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+-include $(DEPS)
+
+.PHONY: all bonus clean fclean re
